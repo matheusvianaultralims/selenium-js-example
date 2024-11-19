@@ -16,7 +16,7 @@ async function run() {
     await driver.get("https://master.ultralims.com.br/public/index.php");
     const username = await driver.findElement(By.id("icon-id"));
     const password = await driver.findElement(By.id("icon_password"));
-    await username.sendKeys(process.env.USERNAME); // é melhor passar com hardcode
+    await username.sendKeys(process.env.USERNAMEUL); 
     await password.sendKeys(process.env.PASSWORD, Key.RETURN);
     setTimeout(async () => {
       const submitButton2 = await driver.findElement(By.id("buttonSubmit"));
